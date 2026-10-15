@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio personal de Matheo Yepez">
+  <title>Portafolio 🥭</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="barra-superior" aria-label="Navegación decorativa">
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta-contenido">
+        <span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span><span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span>
+        <span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span><span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span>
+      </div>
+      <div class="cinta-contenido" aria-hidden="true">
+        <span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span><span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span>
+        <span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span><span>PORTAFOLIO</span><span class="kaomoji"><span class="kao kao-a">〜(^∇^〜)</span><span class="kao kao-b">（〜^∇^)〜</span></span>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="portada" aria-label="Presentación de Matheo Yepez">
+
+
+
+
+    <img class="fondo" src="imagenes/Fondo.svg" alt="" aria-hidden="true">
+    <img class="alas" src="imagenes/Alas.svg" alt="" aria-hidden="true">
+    <img class="disco" src="imagenes/Disco.svg" alt="" aria-hidden="true">
+    <img class="nombre" src="imagenes/Nombre.svg" alt="Matheo Yepez">
+    <img class="hoja" src="imagenes/Sticker_Hoja.svg" alt="" aria-hidden="true">
+    <img class="mango" src="imagenes/Sticker_Mango.svg" alt="" aria-hidden="true">
+
+
+    <div class="marco-personaje" id="personaje" tabindex="0" role="img" aria-label="Ilustración animada de Matheo">
+      <div class="animacion-lottie" aria-hidden="true"></div>
+    </div>
+
+
+
+
+<section class="presentacion" aria-label="Sobre mí">
+  <p id="texto-presentacion"></p>
+
+
+  <span id="texto-original" hidden>
+    ¡Hola! Mi nombre es Matheo, soy técnico en producción de multimedia de Colombia, ¡actualmente en el proceso de convertirme en tecnólogo!
+  </span>
+</section>
+
+
+
+
+<section class="reproductor" aria-label="Reproductor musical">
+  <div class="reproductor-barra">
+    <button id="musica-anterior" class="control-lateral"
+      type="button" aria-label="Canción anterior">
+      <svg viewBox="0 0 100 70" aria-hidden="true">
+        <path d="M48 3 L3 35 L48 67 L48 48 L91 67 L91 3 L48 22 Z"/>
+      </svg>
+    </button>
+
+
+<button id="musica-play" class="control-central"
+  type="button" aria-label="Reproducir">
+
+  <!-- Triángulo: aparece cuando está pausado -->
+  <svg class="icono-play" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M25 8 L85 50 L25 92 Z"/>
+  </svg>
+
+  <!-- Dos barras: aparecen cuando está reproduciendo -->
+  <svg class="icono-pausa" viewBox="0 0 100 100"
+    aria-hidden="true" hidden>
+    <path d="M25 15 H42 V85 H25 Z M58 15 H75 V85 H58 Z"/>
+  </svg>
+
+</button>
+
+
+    <button id="musica-siguiente" class="control-lateral"
+      type="button" aria-label="Canción siguiente">
+      <svg viewBox="0 0 100 70" aria-hidden="true">
+        <path d="M52 3 L97 35 L52 67 L52 48 L9 67 L9 3 L52 22 Z"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="volumen-contenedor">
+    <input
+      id="musica-volumen"
+      class="volumen-barra"
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      aria-label="Volumen"
+    />
+  </div>
+
+  <p id="musica-cancion" class="musica-cancion">
+    Título de la canción
+  </p>
+
+  <p id="musica-estado" class="musica-estado"
+    role="status" aria-live="polite">
+    Preparando música...
+  </p>
+</section>
+
+
+
+    <a class="indicacion" href="#siguiente">
+      <span>¿Quieres saber más sobre mí?</span>
+      <span>Desliza hacia abajo</span>
+      <svg viewBox="0 0 32 42" aria-hidden="true"><path d="M16 2v31M5 23l11 12 11-12" /></svg>
+    </a>
+  </main>
+  <div id="siguiente" class="siguiente" aria-label="Continuación del portafolio"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="interacciones.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<script src="interacciones.js"></script>
+
+
+
+
+
+
+</body>
+</html>

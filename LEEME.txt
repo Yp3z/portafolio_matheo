@@ -1,0 +1,16 @@
+PORTAFOLIO MATHEO YEPEZ
+
+ARCHIVOS
+- index.html: estructura de la portada.
+- estilos.css: composición, tipografía, colores y animaciones CSS.
+- interacciones.js: control de la animación Lottie por segmentos.
+- imagenes/: recursos SVG y Personaje_Lottie.json.
+
+ANIMACIÓN LOTTIE
+El archivo JSON está configurado a 30 fps. El personaje repite el segmento 0–150 (segundos 0–5) mientras el cursor no está encima. Al entrar el cursor o enfocar el personaje con teclado, reproduce una sola vez el segmento 150–390 (segundos 5–13). Al salir el cursor o perder el foco, vuelve al bucle inicial 0–150.
+
+IMPORTANTE SOBRE LOS RECURSOS LOTTIE
+Personaje_Lottie.json referencia 21 imágenes externas con rutas images/img_0.png hasta images/img_20.png. Para que Lottie pueda mostrar la ilustración completa, esos PNG deben estar dentro de la carpeta imagenes/images/. No estaban presentes en los recursos recibidos al actualizar este proyecto; el JSON por sí solo no incluye los bitmaps.
+
+EJECUCIÓN
+Abre la carpeta con Visual Studio Code y ejecuta index.html con Live Server. La librería Bodymovin/Lottie se carga desde CDN, por lo que se requiere conexión a Internet.
