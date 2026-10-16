@@ -24,7 +24,7 @@
     </div>
   </header>
 
-
+<!-- ==================== INICIO SECCIÓN 1 ==================== -->
   <main class="portada" aria-label="Presentación de Matheo Yepez">
 
 
@@ -50,7 +50,7 @@
 
 
   <span id="texto-original" hidden>
-    ¡Hola! Mi nombre es Matheo, soy técnico en producción de multimedia de Colombia, ¡actualmente en el proceso de convertirme en tecnólogo!
+    ¡Hola! Mi nombre es Matheo y soy un técnico de producción de multimedia Colombiano, apasionado por la música, la ilustración y la animación, ¡actualmente estoy en el proceso de convertirme en tecnólogo!
   </span>
 </section>
 
@@ -122,7 +122,152 @@
       <svg viewBox="0 0 32 42" aria-hidden="true"><path d="M16 2v31M5 23l11 12 11-12" /></svg>
     </a>
   </main>
-  <div id="siguiente" class="siguiente" aria-label="Continuación del portafolio"></div>
+
+
+  
+<!-- ==================== FIN SECCIÓN 1 ==================== -->
+
+<!-- ==================== INICIO SECCIÓN 2 ==================== -->
+<section id="seccion-dos" class="seccion-dos"
+  aria-label="Sobre mí y mi formación">
+
+  <!-- Fondo decorativo: continúa desde la sección anterior -->
+  <img
+    class="fondo-nube-negra"
+    src="imagenes/Fondo Nube Negra.svg"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <!-- Decoración de la sección -->
+  <img
+    class="estrella-seccion"
+    src="imagenes/Estrella.svg"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <img
+    class="kaomoji-seccion"
+    src="imagenes/Kaomoji.svg"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <!-- Cuadro SOBRE MÍ -->
+  <article class="cuadro-sobre-mi">
+    <img
+      class="marco-sobre-mi"
+      src="imagenes/Cuadro SM.svg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <img
+      class="titulo-sobre-mi"
+      src="imagenes/Sobre Mi.svg"
+      alt="Sobre mí"
+    />
+
+    <p class="texto-sobre-mi">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+      magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+      quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+      ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+      dolor in hendrerit in vulputate velit esse molestie consequat.
+    </p>
+  </article>
+
+  <!-- Tableta animada -->
+  <div class="tableta-contenedor">
+    <video
+      class="tableta-animada"
+      src="imagenes/Celular.webm"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-label="Animación de una tableta gráfica"
+    ></video>
+  </div>
+
+  <!-- Formación e historia -->
+  <article class="historia-formacion" aria-labelledby="titulo-formacion">
+    <img
+      class="barra-busqueda"
+      src="imagenes/Barra Busqueda.svg"
+      alt=""
+      aria-hidden="true"
+    />
+
+
+    <div
+      id="historias-lista"
+      class="historias-lista"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <p class="historia-texto" data-historia="0">
+        De pequeño, solía ver youtubers de arte digital que me
+        inspiraban para mis dibujos; recreaba sus obras y seguía
+        sus consejos desde donde podía: <span class="ripple-wave">mis cuadernos</span>.
+        Pero siempre aspiré a tener sus mismas habilidades y materiales
+        de arte, al menos cuando fuera mayor.
+      </p>
+
+      <p class="historia-texto" data-historia="1" hidden>
+        Fue entonces, a mis 15 años, que logré comprar mi primera
+        (y actual) tableta gráfica, con los ahorros que llevaba
+        haciendo por años. A partir de ahí comencé a
+        <span class="ripple-wave">digitalizar mis dibujos de forma autónoma</span>,
+        aunque siguiendo uno que otro tutorial.
+      </p>
+
+      <p class="historia-texto" data-historia="2" hidden>
+        Más tarde, en la escuela, se me dio la oportunidad de hacer la
+        <span class="ripple-wave">Técnica en Integración de Contenidos Digitales (2023 - 2024)</span>,
+        en donde perfeccioné mis habilidades de dibujo y adquirí nuevas,
+        como el uso de la Suite de Adobe y plataformas de creación de
+        páginas web como Wix.
+      </p>
+
+      <p class="historia-texto" data-historia="3" hidden>
+        Una vez graduado de bachillerato, decidí continuar con mis
+        estudios con el <span class="ripple-wave">SENA</span>, encadenándome
+        al programa de
+        <span class="ripple-wave">Tecnólogo en Producción de Multimedia (2025-2027)</span>,
+        donde estoy aprendiendo cada vez más: modelado 3D, marketing
+        digital, maquetación web y muchas habilidades más.
+      </p>
+    </div>
+
+    <nav class="historias-controles" aria-label="Seleccionar historia">
+      <button type="button" data-ir-historia="0"
+        aria-label="Mostrar historia 1" aria-pressed="true"></button>
+      <button type="button" data-ir-historia="1"
+        aria-label="Mostrar historia 2" aria-pressed="false"></button>
+      <button type="button" data-ir-historia="2"
+        aria-label="Mostrar historia 3" aria-pressed="false"></button>
+      <button type="button" data-ir-historia="3"
+        aria-label="Mostrar historia 4" aria-pressed="false"></button>
+    </nav>
+  </article>
+
+  <!-- Cursor decorativo flotante -->
+  <img
+    id="cursor-decorativo"
+    class="cursor-decorativo"
+    src="imagenes/Cursor.svg"
+    alt=""
+    aria-hidden="true"
+  />
+
+</section>
+<!-- ==================== FIN SECCIÓN 2 ==================== -->
+<div id="siguiente" class="siguiente" aria-hidden="true"></div>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>

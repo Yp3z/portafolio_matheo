@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1753.37 227.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ede1c9;
+      }
+
+      .cls-2 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-3 {
+        font-family: Coolvetica-Regular, Coolvetica;
+        font-size: 89.66px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #342b22;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="-.64" y="32.32" width="1754.65" height="163.14" rx="81.17" ry="81.17" transform="translate(5.35 -35.49) rotate(2.33)"/>
+  <g>
+    <path class="cls-4" d="M123.27,74.07c-.69,11.8-8.64,22.65-20.04,26.26-11.97,3.79-25.25-.14-32.85-10.29-15.91-21.27,4.07-52.38,30.07-46.19,14.12,3.36,23.14,15.9,22.81,30.21-.29,12.69,19.42,12.68,19.71,0,.48-20.92-12.13-39.67-31.51-47.36-18.35-7.28-40.66-1.98-53.79,12.79-13.92,15.67-16.74,38.73-6.42,57.12s30.56,27.27,50.65,24.2c23.26-3.55,39.73-23.76,41.07-46.75.74-12.67-18.97-12.63-19.71,0Z"/>
+    <path class="cls-4" d="M104.83,111.7c7.99,11.48,15.99,22.95,23.98,34.43,3.04,4.36,8.63,6.37,13.48,3.54,4.32-2.53,6.59-9.09,3.54-13.48-7.99-11.48-15.99-22.95-23.98-34.43-3.04-4.36-8.63-6.37-13.48-3.54-4.32,2.53-6.59,9.09-3.54,13.48h0Z"/>
+  </g>
+  <text class="cls-3" transform="translate(190.5 119.67) rotate(2.33)"><tspan x="0" y="0">¿DONDE ADQUIRI MIS CONOCIMIEN</tspan><tspan class="cls-2" x="1297.78" y="0">T</tspan><tspan class="cls-5" x="1344.67" y="0">O</tspan><tspan x="1404.12" y="0">S?</tspan></text>
+</svg>

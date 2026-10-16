@@ -417,6 +417,315 @@ body {
 }
 
 
+/* ==================== SECCIÓN 2 ==================== */
+
+:root {
+  --marron: #8e5b30;
+}
+
+/*
+  La sección 1 se dibuja por encima del fondo oscuro nuevo.
+  Así el disco existente puede continuar visualmente sobre la nube.
+*/
+.portada {
+  z-index: 2;
+  overflow: visible;
+}
+
+.seccion-dos {
+  position: relative;
+  z-index: auto;
+  isolation: auto;
+  width: 100%;
+  min-height: 100%;
+  margin-top: -3vw;
+  padding: 5vw 5.5% 8vw;
+  overflow: hidden;
+  color: var(--blanco);
+}
+
+/* Nube oscura que conecta ambas secciones; no añade otro disco. */
+.fondo-nube-negra {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Decoración */
+.estrella-seccion {
+  position: absolute;
+  z-index: 2;
+  top: -3%;
+  right: 2%;
+  width: clamp(90px, 20vw, 190px);
+  height: auto;
+  pointer-events: none;
+  animation: flotar-estrella 6s ease-in-out infinite;
+}
+
+.kaomoji-seccion {
+  position: absolute;
+  z-index: 3;
+  top: 4%;
+  right: 25%;
+  width: clamp(45px, 9vw, 90px);
+  height: auto;
+  pointer-events: none;
+}
+
+/* Cuadro "Sobre mí" */
+.cuadro-sobre-mi {
+  position: relative;
+  z-index: 3;
+  width: min(58%, 620px);
+  min-height: 285px;
+  margin: 0 0 35px 22%;
+  padding: 65px 35px 30px;
+  color: var(--negro);
+  transform: rotate(-5deg);
+}
+
+.marco-sobre-mi {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.titulo-sobre-mi {
+  display: block;
+  width: min(75%, 330px);
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.texto-sobre-mi {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  font-size: clamp(12px, 1.25vw, 15px);
+  line-height: 1.18;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+}
+
+/* Tableta animada */
+.tableta-contenedor {
+  position: absolute;
+  z-index: 4;
+  top: 54%;
+  left: 0;
+  width: min(70%, 500px);
+  transform: rotate(-4deg);
+}
+
+.tableta-animada {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Título y cuatro historias */
+.historia-formacion {
+  position: relative;
+  z-index: 4;
+  width: min(49%, 490px);
+  margin: 70px 0 0 auto;
+  padding: 0 1%;
+}
+
+.barra-busqueda {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.titulo-formacion {
+  position: absolute;
+  top: 0;
+  left: 7%;
+  width: 86%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--negro);
+  font-family: var(--fuente-principal);
+  font-size: clamp(14px, 1.8vw, 21px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.historias-lista {
+  min-height: 125px;
+  margin-top: 24px;
+  padding: 0 6%;
+}
+
+.historia-texto {
+  margin: 0;
+  color: var(--blanco);
+  font-family: var(--fuente-principal);
+  font-size: clamp(13px, 1.35vw, 16px);
+  line-height: 1.2;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.historia-texto[hidden] {
+  display: none;
+}
+
+.ripple-wave {
+  display: inline;
+  color: var(--marron);
+  font-weight: 700;
+}
+
+/* Indicadores manuales */
+.historias-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: fit-content;
+  margin: 14px auto 0;
+  padding: 8px 12px;
+  border-radius: 30px;
+  background: var(--blanco);
+}
+
+.historias-controles button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #a29b8a;
+  cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.historias-controles button[aria-pressed="true"] {
+  background: var(--verde);
+  transform: scale(1.15);
+}
+
+.historias-controles button:focus-visible {
+  outline: 2px solid var(--marron);
+  outline-offset: 3px;
+}
+
+/* Cursor decorativo: no reemplaza el cursor del sistema. */
+.cursor-decorativo {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  left: 50%;
+  width: clamp(20px, 3.2vw, 35px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  transform-origin: 25% 15%;
+  will-change: transform, left, top;
+}
+
+/* Elementos que el cursor puede simular que toca. */
+.cuadro-sobre-mi,
+.tableta-contenedor,
+.historia-formacion,
+.estrella-seccion {
+  transform-origin: center;
+}
+
+@keyframes flotar-estrella {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 -9px; rotate: 2deg; }
+}
+
+@media (max-width: 650px) {
+  .seccion-dos {
+    min-height: 780px;
+    margin-top: -2vw;
+    padding: 35px 5% 65px;
+  }
+
+  .cuadro-sobre-mi {
+    width: 88%;
+    min-height: 245px;
+    margin: 0 auto 25px;
+    padding: 50px 25px 25px;
+  }
+
+  .titulo-sobre-mi {
+    width: 72%;
+    margin-bottom: 12px;
+  }
+
+  .texto-sobre-mi {
+    font-size: clamp(11px, 3vw, 14px);
+  }
+
+  .estrella-seccion {
+    top: 20%;
+    right: 1%;
+    width: 18%;
+  }
+
+  .kaomoji-seccion {
+    top: 29%;
+    right: 10%;
+  }
+
+  .tableta-contenedor {
+    top: auto;
+    bottom: 5%;
+    left: -2%;
+    width: 49%;
+  }
+
+  .historia-formacion {
+    width: 58%;
+    margin: 35px 0 0 auto;
+  }
+
+  .historias-lista {
+    min-height: 190px;
+    margin-top: 18px;
+    padding: 0 2%;
+  }
+
+  .historia-texto {
+    font-size: clamp(12px, 3vw, 15px);
+  }
+
+  .titulo-formacion {
+    font-size: clamp(12px, 3vw, 17px);
+  }
+
+  .cursor-decorativo {
+    width: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .estrella-seccion {
+    animation: none;
+  }
+}
+
+
 
 @keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
 @keyframes recorrer { to { transform: translateX(-50%); } }

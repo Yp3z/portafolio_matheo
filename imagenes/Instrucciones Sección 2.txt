@@ -1,0 +1,62 @@
+- Paleta de Colores:
+Negro: #342B22
+Blanco: #EDE1C9
+Verde: #66663A
+Marrón: #8e5b30
+
+- Cuadro Sobre Mi
+
+Cuadro: SVG
+Titulo: SVG
+Texto: CSS, Fuente Coolvetica
+Dejarlo con un Lorem Ipsum por el momento, has que el texto este justificado igualmente como en la primera sección.
+
+
+- Cursor Verde: SVG
+Tamaño pequeño pero notorio como en el ejemplo, animación flotando al rededor, clickeando (efecto de que se vuelve un poco pequeño y luego su tamaño original) algunas cosas y luego volviendo a flotar al rededor.
+
+- Fondo Negro: SVG
+Que este encima del fondo de la primera sección COMO SE MUESTRA EN EL EJEMPLO, pero que los objetos de dicha sección como el disco se mantengan sobre el, el estilo de la pagina es una landing page, por lo que es necesario que se vea continuo y no cortes entre secciones, en general ubica los objetos tal y como se muestran en el ejemplo.
+
+- Animacion Nueva Tableta: WEBM
+Animación infinita en loop, ubicada a la esquina de la pantalla
+
+- Titulo donde adquiri mis conocimientos: SVG
+
+- Texto de esa sección:
+Se dividira en 4 partes de historia, por lo que una vez que se muestre una, cada 20 segundos pasara a la otra y asi por siempre, También se pueden cambiar de forma manual mediante los botoncitos abajo que se muestran en el ejemplo, que indicaran cual de las 4 partes se esta leyendo.
+
+Partes (de ser necesario correguir unicamente ortografia/tildes):
+
+1.
+
+De pequeño, solia ver youtubers de arte digital que me inspiraban para mis dibujos, recreaba sus obras y seguia sus consejos desde donde podia, mis cuadernos. Pero siempre aspire a tener sus mismas habilidades y materiales de arte, al menos cuando fuera mayor.
+
+2. 
+
+Fue entonces a mis 15 años que logre comprar mi primera (y actual) tableta grafica, con los ahorros que llevaba haciendo por años. Apartir de ahi comenze a digitalizar mis dibujos de forma autonoma, aunque siguiendo uno que otro tutorial.
+
+3. 
+
+Más tarde en la escuela, se me dio la oportunidad de hacer la
+ Tecnica en Integración de Contenidos Digitales (2023 - 2024)
+en donde perfeccione mis habilidades de dibujo y adquiri nuevas, como el uso de la Suite de Adobe y plataformas de creación de paginas web como Wix.
+
+4. 
+
+Una vez graduado de bachillerato, decidi continuar con mis estudios con el SENA, encadenandome al programa de 
+Tecnologo en en Producción de Multimedia (2025-2027) que es donde estoy aprendiendo más y más actualmente, habilidades como modelado 3d, marketing digital, maquetación web, y mucas más. 
+
+
+Todos estos textos seran del color blanco indicado arriba en paleta de colores, pero las siguientes palabras y frases de cada sección seran de color marrón y tendran ademas el efecto de RippleWave de GSAP encontrado en la pagina (https://gsapify.com/gsap-text-animations/)
+
+Palabras en marron y con efecto de gsap:
+mis cuadernos
+
+digitalizar mis dibujos de forma autonoma
+
+Tecnica en Integración de Contenidos Digitales (2023 - 2024)
+
+SENA
+
+Tecnologo en en Producción de Multimedia (2025-2027) 

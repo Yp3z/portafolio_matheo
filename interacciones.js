@@ -274,3 +274,167 @@
   // Si el navegador la bloquea, el usuario podrá pulsar Play.
   reproducir();
 })();
+
+
+/* ==================== INTERACCIONES SECCIÓN 2 ==================== */
+(() => {
+  "use strict";
+
+  const seccion = document.getElementById("seccion-dos");
+  if (!seccion) return;
+
+  /* ---------- Historias con cambio cada 20 segundos ---------- */
+
+  const historias = [
+    ...seccion.querySelectorAll(".historia-texto")
+  ];
+
+  const botonesHistoria = [
+    ...seccion.querySelectorAll("[data-ir-historia]")
+  ];
+
+  let historiaActual = 0;
+  let temporizadorHistoria;
+  let animacionTexto;
+
+  function animarPalabrasDestacadas(contenedor) {
+    if (!window.gsap) return;
+
+    const palabras = contenedor.querySelectorAll(".ripple-wave");
+
+    palabras.forEach((palabra) => {
+      // Evitar envolver las letras más de una vez.
+      if (palabra.dataset.wavePreparado === "true") return;
+      palabra.dataset.wavePreparado = "true";
+
+      const texto = palabra.textContent;
+      palabra.replaceChildren();
+
+      [...texto].forEach((caracter) => {
+        const letra = document.createElement("span");
+        letra.textContent = caracter === " " ? "\u00A0" : caracter;
+        letra.style.display = "inline-block";
+        palabra.appendChild(letra);
+      });
+    });
+
+    const letras = contenedor.querySelectorAll(".ripple-wave span");
+    if (!letras.length) return;
+
+    if (animacionTexto) animacionTexto.kill();
+
+    gsap.set(letras, { y: 0, scale: 1 });
+
+    // Efecto ondulatorio: las letras suben en secuencia y regresan.
+    animacionTexto = gsap.to(letras, {
+      y: -4,
+      scale: 1.04,
+      duration: 0.35,
+      stagger: {
+        each: 0.025,
+        repeat: 1,
+        yoyo: true
+      },
+      ease: "sine.inOut"
+    });
+  }
+
+  function mostrarHistoria(indice) {
+    historiaActual = (indice + historias.length) % historias.length;
+
+    historias.forEach((historia, i) => {
+      historia.hidden = i !== historiaActual;
+    });
+
+    botonesHistoria.forEach((boton, i) => {
+      boton.setAttribute(
+        "aria-pressed",
+        String(i === historiaActual)
+      );
+    });
+
+    if (animacionTexto) {
+      animacionTexto.kill();
+      animacionTexto = null;
+    }
+
+    const historiaVisible = historias[historiaActual];
+    if (historiaVisible) {
+      animarPalabrasDestacadas(historiaVisible);
+    }
+
+    reiniciarTemporizador();
+  }
+
+  function reiniciarTemporizador() {
+    window.clearTimeout(temporizadorHistoria);
+
+    temporizadorHistoria = window.setTimeout(() => {
+      mostrarHistoria(historiaActual + 1);
+    }, 20000);
+  }
+
+  botonesHistoria.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      mostrarHistoria(Number(boton.dataset.irHistoria));
+    });
+  });
+
+  if (historias.length) {
+    mostrarHistoria(0);
+  }
+
+  /* ---------- Cursor flotante con efecto de clic ---------- */
+
+  const cursor = document.getElementById("cursor-decorativo");
+
+  if (cursor && window.gsap) {
+    const elementosObjetivo = [
+      seccion.querySelector(".cuadro-sobre-mi"),
+      seccion.querySelector(".tableta-contenedor"),
+      seccion.querySelector(".historia-formacion"),
+      seccion.querySelector(".estrella-seccion")
+    ].filter(Boolean);
+
+    let indiceObjetivo = 0;
+
+    function moverCursor() {
+      if (!elementosObjetivo.length) return;
+
+      const objetivo = elementosObjetivo[
+        indiceObjetivo % elementosObjetivo.length
+      ];
+      indiceObjetivo++;
+
+      const limite = seccion.getBoundingClientRect();
+      const caja = objetivo.getBoundingClientRect();
+
+      const x = caja.left - limite.left + caja.width * 0.8;
+      const y = caja.top - limite.top + caja.height * 0.8;
+
+      gsap.to(cursor, {
+        left: x,
+        top: y,
+        duration: 1.5,
+        ease: "sine.inOut",
+        onComplete: () => {
+          gsap.timeline()
+            .to(cursor, {
+              scale: 0.78,
+              duration: 0.12,
+              ease: "power1.in"
+            })
+            .to(cursor, {
+              scale: 1,
+              duration: 0.18,
+              ease: "back.out(2)"
+            });
+        }
+      });
+    }
+
+    // El cursor se mueve entre los elementos, simulando pequeños clics.
+    moverCursor();
+    window.setInterval(moverCursor, 3500);
+  }
+})();
